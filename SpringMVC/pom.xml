@@ -7,6 +7,18 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringMVC Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	
+	<properties>
+        <springframework.version>5.0.2.RELEASE</springframework.version>
+        <hibernate.version>5.2.12.Final</hibernate.version>
+        <mysql.connector.version>6.0.6</mysql.connector.version>
+        <joda-time.version>2.9.9</joda-time.version>
+        <testng.version>6.13.1</testng.version>
+        <mockito.version>1.10.19</mockito.version>
+        <h2.version>1.4.196</h2.version>
+        <dbunit.version>2.5.4</dbunit.version>
+    </properties>
+    
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -47,7 +59,16 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<finalName>SpringMVC</finalName>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+			</plugin>
+		</plugins>
 	</build>
 </project>

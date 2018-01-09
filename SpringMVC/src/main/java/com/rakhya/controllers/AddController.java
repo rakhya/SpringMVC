@@ -22,7 +22,7 @@ public class AddController {
 		
 		int k = a.add(i, j);
 		
-		ModelAndView mv = new ModelAndView("display");
+		ModelAndView mv = new ModelAndView("displayAdd");
 		mv.addObject("result", k);
 		return mv;
 	}
